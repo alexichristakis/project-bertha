@@ -12,8 +12,9 @@ class App extends Component {
 	state = {
 		loading: false,
 		username: "",
-		data: require("../SAMPLE2.json")
-		// data: null
+		// data: require("../SAMPLE2.json"),
+		queried_username: "",
+		data: null
 	};
 
 	handleUsernameChange = event => {
@@ -23,13 +24,13 @@ class App extends Component {
 
 	handlePressSearch = () => {
 		const { username } = this.state;
-		console.log(username);
+		// console.log(username);
 		this.setState({ loading: true }, () =>
 			fetchSentiment(username)
 				.then(res => {
-					console.log(res);
+					// console.log(res);
 					const { data } = res;
-					this.setState({ data, loading: false });
+					this.setState({ data, queried_username: username, loading: false });
 
 					/* some rudimentary analysis */
 					// let pos = 0;
@@ -61,7 +62,7 @@ class App extends Component {
 					onUsernameChange={this.handleUsernameChange}
 					onSearch={this.handlePressSearch}
 				/>
-				<Anayltics data={this.state.data} />
+				<Anayltics data={this.state.data} username={this.state.queried_username} />
 			</Fragment>
 		);
 	}

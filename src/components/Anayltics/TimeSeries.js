@@ -3,7 +3,6 @@ import styled from "styled-components";
 import _ from "lodash";
 import moment from "moment";
 import {
-	VictoryLabel,
 	VictoryZoomContainer,
 	VictoryChart,
 	VictoryTheme,
@@ -20,6 +19,7 @@ const Wrapper = styled.div`
 
 class TimeSeries extends Component {
 	state = {
+		time_series: [],
 		zoomedXDomain: [],
 		combined_dataset: [],
 		positive: [],
@@ -27,10 +27,22 @@ class TimeSeries extends Component {
 	};
 
 	componentDidMount() {
-		this.updateData([-1 * Infinity, Infinity], () =>
-			this.setState({ entireDomain: this.getEntireDomain })
-		);
+		this.update();
 	}
+
+	componentWillReceiveProps(nextProps) {
+		if (this.props.username !== nextProps.username) {
+			this.update();
+		}
+	}
+
+	update = () => {
+		this.setState({ time_series: this.props.data.time_series }, () => {
+			this.updateData([-1 * Infinity, Infinity], () =>
+				this.setState({ entireDomain: this.getEntireDomain })
+			);
+		});
+	};
 
 	getEntireDomain() {
 		const { combined_dataset } = this.state;
@@ -40,10 +52,10 @@ class TimeSeries extends Component {
 		};
 	}
 
-	getData() {
-		const { zoomedXDomain } = this.state;
-		this.updateData(zoomedXDomain);
-	}
+	// getData() {
+	// 	const { zoomedXDomain } = this.state;
+	// 	this.updateData(zoomedXDomain);
+	// }
 
 	filter = (entry, domain) => {
 		const ts = moment(entry.x).unix();
@@ -64,7 +76,7 @@ class TimeSeries extends Component {
 			.reverse()
 			.filter(entry => this.filter(entry, domain));
 
-		console.log("combined:", combined_dataset);
+		// console.log("combined:", combined_dataset);
 
 		let positive = time_series
 			.map(entry => {
@@ -99,7 +111,7 @@ class TimeSeries extends Component {
 
 	render() {
 		const { combined_dataset, positive, negative } = this.state;
-		console.log(combined_dataset);
+		// console.log(combined_dataset);
 
 		return (
 			<Wrapper>

@@ -15,14 +15,14 @@ const Wrapper = styled.div`
 
 class Anayltics extends Component {
 	render() {
-		const { data } = this.props;
+		const { data, username } = this.props;
 
-		console.log(data);
+		// console.log(data);
 		if (data == null) return <div />;
 		else {
 			return (
 				<Wrapper>
-					<TimeSeries data={data} />
+					<TimeSeries data={data} username={username} />
 					<PosNeg data={data} />
 				</Wrapper>
 			);
