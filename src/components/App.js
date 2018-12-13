@@ -5,7 +5,7 @@ import { VictoryPie } from "victory";
 import TopBar from "./TopBar";
 import Loading from "./Loading";
 
-// import { fetchSentiment } from "../util/api";
+import { fetchSentiment } from "../util/api";
 
 class App extends Component {
 	state = {
@@ -20,10 +20,19 @@ class App extends Component {
 	};
 
 	handlePressSearch = () => {
-		// const { username } = this.state;
-		// fetchSentiment(username).then(res => {
-		// 	this.setState({ data: res });
-		// });
+		const { username } = this.state;
+		console.log(username);
+		this.setState({ loading: true }, () =>
+			fetchSentiment(username)
+				.then(res => {
+					console.log(res);
+					this.setState({ data: res, loading: false });
+				})
+				.catch(error => {
+					console.log(error);
+					this.setState({ loading: false });
+				})
+		);
 	};
 
 	render() {
@@ -34,7 +43,7 @@ class App extends Component {
 					loading={this.state.loading}
 					username={this.state.username}
 					onUsernameChange={this.handleUsernameChange}
-					onPressSearch={this.handlePressSearch}
+					onSearch={this.handlePressSearch}
 				/>
 			</Fragment>
 		);

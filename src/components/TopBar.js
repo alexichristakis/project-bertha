@@ -51,6 +51,7 @@ class TopBar extends Component {
 			<Wrapper>
 				<Title>sentimenter</Title>
 				<Input
+					onSearch={this.props.onSearch}
 					onChange={this.props.onUsernameChange}
 					label="enter a Twitter handle"
 					value={this.props.username}

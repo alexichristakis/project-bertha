@@ -59,6 +59,7 @@ const Button = styled.div`
     color: #afeeff;
     transform: scale(1.25);
   }
+  pointer-events: ${props => (props.disabled ? "none" : "auto")};
 `;
 
 class Input extends Component {
@@ -66,15 +67,9 @@ class Input extends Component {
     active: false
   };
 
-  // changeValue = event => {
-  //   const value = event.target.value;
-  //   this.setState({ value, error: "" });
-  // };
-
   handleKeyPress = event => {
     if (event.which === 13) {
-      console.log("TEST");
-      this.setState({ value: this.props.predicted });
+      this.props.onSearch();
     }
   };
 
@@ -95,7 +90,7 @@ class Input extends Component {
           onFocus={() => !locked && this.setState({ active: true })}
           onBlur={() => !locked && this.setState({ active: false })}
         />
-        <Button onClick={() => console.log("test")}>
+        <Button disabled={locked} onClick={this.props.onSearch}>
           <FaSearch />
         </Button>
       </Field>
