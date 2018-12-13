@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
+import colors from "../lib/colors";
+
 const Field = styled.div`
+  margin-left: 20px;
+  margin-right: 20px;
   width: 100%;
   height: 56px;
   border-radius: 20px;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: ${colors.lightgray};
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
   ${props =>
     props.active

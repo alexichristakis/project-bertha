@@ -1,3 +1,4 @@
 export default {
-	blue: "rgba(255,255,255,1)"
+	gray: "rgba(240,240,240,1)",
+	lightgray: "rgba(250,250,250,1)"
 };
