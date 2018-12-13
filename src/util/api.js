@@ -2,8 +2,8 @@ import axios from "axios";
 
 // const API = `https://floating-journey-91484.herokuapp.com/tweet?username=`;
 
-const baseURL = `https://floating-journey-91484.herokuapp.com/`;
-// const baseURL = `http://0.0.0.0:5000/`;
+// const baseURL = `https://floating-journey-91484.herokuapp.com/`;
+const baseURL = `http://0.0.0.0:5000/`;
 
 const API = axios.create({
 	baseURL
