@@ -12,7 +12,8 @@ class App extends Component {
 	state = {
 		loading: false,
 		username: "",
-		data: {}
+		// data: require("../SAMPLE.json")
+		data: null
 	};
 
 	handleUsernameChange = event => {
@@ -27,17 +28,21 @@ class App extends Component {
 			fetchSentiment(username)
 				.then(res => {
 					console.log(res);
-					let pos = 0;
-					let neg = 0;
 					const { data } = res;
-					data.forEach(tweet => {
-						if (tweet.sentiment == "pos") pos++;
-						if (tweet.sentiment == "neg") neg++;
-					});
+					this.setState({ data, loading: false });
 
-					let analytic_data = { pos, neg, total: pos + neg };
+					/* some rudimentary analysis */
+					// let pos = 0;
+					// let neg = 0;
+					// const { data } = res;
+					// data.forEach(tweet => {
+					// 	if (tweet.sentiment == "pos") pos++;
+					// 	if (tweet.sentiment == "neg") neg++;
+					// });
 
-					this.setState({ data: analytic_data, loading: false });
+					// let analytic_data = { pos, neg, total: pos + neg };
+
+					// this.setState({ data: analytic_data, loading: false });
 				})
 				.catch(error => {
 					console.log(error);

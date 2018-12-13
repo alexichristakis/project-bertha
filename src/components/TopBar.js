@@ -50,7 +50,7 @@ class TopBar extends Component {
 	render() {
 		return (
 			<Wrapper>
-				<Title>sentimenter</Title>
+				<Title>Twitterlytics</Title>
 				<Input
 					onSearch={this.props.onSearch}
 					onChange={this.props.onUsernameChange}

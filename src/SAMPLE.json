@@ -1,0 +1,42 @@
+{
+	"most_negative": {
+		"id": "994413357263241217",
+		"sentiment": "neg",
+		"text": "RT @StephenAtHome: \"Whatsoever you do for the least of your brothers... will get you arrested by ICE.\u201d https://t.co/eeLiffYSlY",
+		"time": "05/10/2018"
+	},
+	"most_positive": {
+		"id": "1032426536652103681",
+		"sentiment": "pos",
+		"text": "RT @Adam_Cozens: Every morning I wake up thankful that we didn't elect a president with debatably questionable email storage policies.",
+		"time": "08/23/2018"
+	},
+	"num_neg": 74,
+	"num_pos": 110,
+	"tweets": [
+		{
+			"id": "1062538651102375936",
+			"sentiment": "pos",
+			"text": "RT @shen: it's 2018 and you can finance a 3.5mm audio dongle https://t.co/59JIhOHPZz",
+			"time": "11/14/2018"
+		},
+		{
+			"id": "1057407006003277825",
+			"sentiment": "pos",
+			"text": "@apple continues to muddle their product lineup.  They how have 3 headphone connection types. I don\u2019t want AirPods.  https://t.co/Dq8YRkIE6V",
+			"time": "10/30/2018"
+		},
+		{
+			"id": "1049485539408207872",
+			"sentiment": "neg",
+			"text": "View from Ocean Ave Lompoc #SAOCOM1A #SpaceX https://t.co/LbEmC0eMVL",
+			"time": "10/09/2018"
+		},
+		{
+			"id": "1046571910148976641",
+			"sentiment": "pos",
+			"text": "Is it normal to look at your calendar on the last day of September and realize there is not one free weekend until January.",
+			"time": "10/01/2018"
+		}
+	]
+}
