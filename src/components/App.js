@@ -3,30 +3,15 @@ import styled from "styled-components";
 import { VictoryPie } from "victory";
 
 import TopBar from "./TopBar";
-// import Loading from "./Loading";
+import Loading from "./Loading";
 
-const Wrapper = styled.div`
-	display: flex;
-	background-color: white;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 80px;
-`;
-
-const TopBar2 = styled.div`
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 50px;
-	background-color: red;
-`;
+// import { fetchSentiment } from "../util/api";
 
 class App extends Component {
 	state = {
 		loading: false,
-		username: ""
+		username: "",
+		data: {}
 	};
 
 	handleUsernameChange = event => {
@@ -34,11 +19,17 @@ class App extends Component {
 		this.setState({ username: value });
 	};
 
-	handlePressSearch = () => {};
+	handlePressSearch = () => {
+		// const { username } = this.state;
+		// fetchSentiment(username).then(res => {
+		// 	this.setState({ data: res });
+		// });
+	};
 
 	render() {
 		return (
 			<Fragment>
+				{this.state.loading && <Loading />}
 				<TopBar
 					loading={this.state.loading}
 					username={this.state.username}

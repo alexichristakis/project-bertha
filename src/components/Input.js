@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { FaSearch } from "react-icons/fa";
 
 import colors from "../lib/colors";
@@ -14,17 +14,18 @@ const Field = styled.div`
   background-color: ${colors.lightgray};
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
   ${props =>
-    props.active
-      ? `
-      background-color: #ffffff;
-      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
-    `
-      : `
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.45);
-        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-      }
-  `};
+    !props.locked &&
+    (props.active
+      ? css`
+          background-color: #ffffff;
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+        `
+      : css`
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.45);
+            box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+          }
+        `)};
 `;
 
 const Text = styled.input`
@@ -82,10 +83,11 @@ class Input extends Component {
     const { label, value, onChange, locked } = this.props;
 
     return (
-      <Field active={active}>
+      <Field active={active} locked={locked}>
         <Text
           id={1}
           type="text"
+          disabled={locked}
           value={value}
           placeholder={label}
           onChange={onChange}
