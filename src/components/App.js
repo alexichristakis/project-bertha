@@ -29,10 +29,22 @@ class App extends Component {
 		username: ""
 	};
 
+	handleUsernameChange = event => {
+		const { value } = event.target;
+		this.setState({ username: value });
+	};
+
+	handlePressSearch = () => {};
+
 	render() {
 		return (
 			<Fragment>
-				<TopBar />
+				<TopBar
+					loading={this.state.loading}
+					username={this.state.username}
+					onUsernameChange={this.handleUsernameChange}
+					onPressSearch={this.handlePressSearch}
+				/>
 			</Fragment>
 		);
 	}

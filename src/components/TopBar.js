@@ -10,8 +10,9 @@ const Wrapper = styled.div`
 	top: 0;
 	left: 0;
 	right: 0;
-	display: flex;
 	padding-left: 20px;
+	padding-right: 20px;
+	display: flex;
 	background-color: rgba(250, 250, 250, 0.9);
 	flex-direction: row;
 	justify-content: space-between;
@@ -22,6 +23,7 @@ const Title = styled.h1`
 	font-size: 30px;
 	font-weight: 700;
 	color: ${colors.black};
+	padding-right: 20px;
 	padding-bottom: 5px;
 `;
 
@@ -39,7 +41,13 @@ class TopBar extends Component {
 		return (
 			<Wrapper>
 				<Title>sentimenter</Title>
-				<Input label="enter a Twitter handle" active={false} />
+				<Input
+					onChange={this.props.onUsernameChange}
+					label="enter a Twitter handle"
+					value={this.props.username}
+					locked={this.props.loading}
+					active={false}
+				/>
 			</Wrapper>
 		);
 	}
