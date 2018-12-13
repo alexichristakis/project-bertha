@@ -1,42 +1,363 @@
 {
-	"most_negative": {
-		"id": "994413357263241217",
-		"sentiment": "neg",
-		"text": "RT @StephenAtHome: \"Whatsoever you do for the least of your brothers... will get you arrested by ICE.\u201d https://t.co/eeLiffYSlY",
-		"time": "05/10/2018"
-	},
-	"most_positive": {
-		"id": "1032426536652103681",
-		"sentiment": "pos",
-		"text": "RT @Adam_Cozens: Every morning I wake up thankful that we didn't elect a president with debatably questionable email storage policies.",
-		"time": "08/23/2018"
-	},
-	"num_neg": 74,
-	"num_pos": 110,
-	"tweets": [
-		{
-			"id": "1062538651102375936",
-			"sentiment": "pos",
-			"text": "RT @shen: it's 2018 and you can finance a 3.5mm audio dongle https://t.co/59JIhOHPZz",
-			"time": "11/14/2018"
-		},
-		{
-			"id": "1057407006003277825",
-			"sentiment": "pos",
-			"text": "@apple continues to muddle their product lineup.  They how have 3 headphone connection types. I don\u2019t want AirPods.  https://t.co/Dq8YRkIE6V",
-			"time": "10/30/2018"
-		},
-		{
-			"id": "1049485539408207872",
-			"sentiment": "neg",
-			"text": "View from Ocean Ave Lompoc #SAOCOM1A #SpaceX https://t.co/LbEmC0eMVL",
-			"time": "10/09/2018"
-		},
-		{
-			"id": "1046571910148976641",
-			"sentiment": "pos",
-			"text": "Is it normal to look at your calendar on the last day of September and realize there is not one free weekend until January.",
-			"time": "10/01/2018"
-		}
-	]
+   "most_negative": {
+      "id": "931949927315529728",
+      "score": 0.9265536004095607,
+      "sentiment": "neg",
+      "text": "@sanjaysaint @NAChristakis @ErikaChristakis In fairness there were samosa related \u201cissues\u201d when this was taken no???",
+      "time": "11/18/2017"
+   },
+   "most_positive": {
+      "id": "337625985254047744",
+      "score": 0.9997933676603622,
+      "sentiment": "pos",
+      "text": "@PracticalWisdom Thx for invite. Will check calendar. Among gr8 company with @dandunlop @SeattleMamaDoc @EvelynHsuMD",
+      "time": "05/23/2013"
+   },
+   "num_neg": 9,
+   "num_pos": 40,
+   "tweets": [
+      {
+         "id": "1050808824163004416",
+         "score": 0.8806259995430662,
+         "sentiment": "neg",
+         "text": "In case you missed it\n\nhttps://t.co/ADS30xZ68Q",
+         "time": "10/12/2018"
+      },
+      {
+         "id": "1044628579726721025",
+         "score": 0.7941450054403368,
+         "sentiment": "pos",
+         "text": "@CaitlinPacific I dont tweet but was looking for a way to give you a shout out.  Your last two pieces in the Atlant\u2026 https://t.co/Qd38uAqUDy",
+         "time": "09/25/2018"
+      },
+      {
+         "id": "988506508253057024",
+         "score": 0.9981382160397774,
+         "sentiment": "pos",
+         "text": "RT @seattlechildren: The Dalai Lama last visited Seattle in 2008 for a \"Seeds of Compassion\" event. Recently, @dachristakis met with @Dalai\u2026",
+         "time": "04/23/2018"
+      },
+      {
+         "id": "987350306060099585",
+         "score": 0.7748538011695913,
+         "sentiment": "pos",
+         "text": "@amanda_spielman I am editor in chief of JAMA Pediatrics, the highest impact pediatric medical journal in the world\u2026 https://t.co/l3INIfoE5J",
+         "time": "04/20/2018"
+      },
+      {
+         "id": "965380267794825217",
+         "score": 0.9702436177535696,
+         "sentiment": "pos",
+         "text": "RT @JAMAPeds: Introducing Dimitri Christakis as the new JAMA Pediatrics editor-in-chief.\nRead his introductory editorial https://t.co/YlxBh\u2026",
+         "time": "02/19/2018"
+      },
+      {
+         "id": "965380228527697922",
+         "score": 0.9773004455732923,
+         "sentiment": "pos",
+         "text": "RT @seemeandliz: Great Tedx Talk by Dr. Dimitri Christakis about brain development and media use! It's a few years old but it is probably m\u2026",
+         "time": "02/19/2018"
+      },
+      {
+         "id": "931949927315529728",
+         "score": 0.9265536004095607,
+         "sentiment": "neg",
+         "text": "@sanjaysaint @NAChristakis @ErikaChristakis In fairness there were samosa related \u201cissues\u201d when this was taken no???",
+         "time": "11/18/2017"
+      },
+      {
+         "id": "931942306084786176",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "@NAChristakis @sanjaysaint @ErikaChristakis @katrina_PC What constitutes slander on Twitter?",
+         "time": "11/18/2017"
+      },
+      {
+         "id": "931931255557558272",
+         "score": 0.8720738933078752,
+         "sentiment": "pos",
+         "text": "RT @NAChristakis: Today is #NationalAdoptionDay. This is me and my siblings not long after our extraordinary mother died, in 1987. @ErikaCh\u2026",
+         "time": "11/18/2017"
+      },
+      {
+         "id": "883920201187708928",
+         "score": 0.790322580645162,
+         "sentiment": "pos",
+         "text": "RT @NAChristakis: Hanging with my most longstanding crew @EndoSurgSF @DAChristakis @katrina_PC https://t.co/vY0wGOAMdx",
+         "time": "07/09/2017"
+      },
+      {
+         "id": "883536401177784320",
+         "score": 0.8868892911807164,
+         "sentiment": "neg",
+         "text": "RT @ErikaChristakis: Photo of a 1912 playground is going viral &amp; there is much to admire in it -- like the enthusiasm &amp; fearlessness of the\u2026",
+         "time": "07/08/2017"
+      },
+      {
+         "id": "883536321578360833",
+         "score": 0.8398297330261205,
+         "sentiment": "neg",
+         "text": "RT @heckmanequation: Intensive Preschool Programs Can Yield Massive Returns, Especially for Boys, Nobel Laureate\u2019s Study Shows\n \nhttps://t.\u2026",
+         "time": "07/08/2017"
+      },
+      {
+         "id": "883536051549032448",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "RT @DAChristakis: ADHD as a diagnosis should be a spectrum disorder. @npr on my @jama_current editorial: https://t.co/h27ai3iCOc",
+         "time": "07/08/2017"
+      },
+      {
+         "id": "831201087059226628",
+         "score": 0.7162162162162162,
+         "sentiment": "pos",
+         "text": "@jeanneinks email dachris@uw.edu",
+         "time": "02/13/2017"
+      },
+      {
+         "id": "831184181140992000",
+         "score": 0.6858472928855108,
+         "sentiment": "pos",
+         "text": "@jeanneinks Hi jeanne can we talk survival capsule?",
+         "time": "02/13/2017"
+      },
+      {
+         "id": "811373812683927552",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "https://t.co/AqqmMUtiQr",
+         "time": "12/21/2016"
+      },
+      {
+         "id": "806630038854463488",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "From Seattle Children's https://t.co/MnNub1Kw7S via @pediatricpulse",
+         "time": "12/07/2016"
+      },
+      {
+         "id": "684142783087525888",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "ADHD as a diagnosis should be a spectrum disorder. @npr on my @jama_current editorial: https://t.co/h27ai3iCOc",
+         "time": "01/04/2016"
+      },
+      {
+         "id": "521120080747188225",
+         "score": 0.9807499742226461,
+         "sentiment": "pos",
+         "text": "RT @jimsteyer: Had a great panel with @dimitri007 and @doctornatasha at #aapexperience in SD today...thx to @davhill and @drClaire. Plenary\u2026",
+         "time": "10/12/2014"
+      },
+      {
+         "id": "448179567761444864",
+         "score": 0.85326842837274,
+         "sentiment": "pos",
+         "text": "@Raffi_RC thanks!",
+         "time": "03/24/2014"
+      },
+      {
+         "id": "447923940170952704",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "http://t.co/Qe1ET1iiib",
+         "time": "03/24/2014"
+      },
+      {
+         "id": "443376213793325056",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "@Kind4Kids @Dimitri007 @AmerAcadPeds @JAMAPeds",
+         "time": "03/11/2014"
+      },
+      {
+         "id": "396579613293678592",
+         "score": 0.944859090148854,
+         "sentiment": "pos",
+         "text": "RT @HealthcareCity: Thank You @Sydney_Uni @USydFHS for a successful event on Health Education &amp; Research http://t.co/B29xvO7N0i",
+         "time": "11/02/2013"
+      },
+      {
+         "id": "396477610785775616",
+         "score": 0.8613845144356949,
+         "sentiment": "pos",
+         "text": "@Dr_Sharif @EIP_Institute @HealthcareCity @MBR_AMC @CMHS_UAEU Looking forward to it",
+         "time": "11/02/2013"
+      },
+      {
+         "id": "338001036629381120",
+         "score": 0.9187247323870523,
+         "sentiment": "neg",
+         "text": "RT @KJDellAntonia: Charted: what teens tell on social media, broken down by gender and age. Name, school, videos, photos... http://t.co/tTr\u2026",
+         "time": "05/24/2013"
+      },
+      {
+         "id": "337625985254047744",
+         "score": 0.9997933676603622,
+         "sentiment": "pos",
+         "text": "@PracticalWisdom Thx for invite. Will check calendar. Among gr8 company with @dandunlop @SeattleMamaDoc @EvelynHsuMD",
+         "time": "05/23/2013"
+      },
+      {
+         "id": "337604299720892416",
+         "score": 0.7954545454545463,
+         "sentiment": "neg",
+         "text": "RT @Lizzyfit: Push for PE to fight #childhoodobesity. But what about afterschool sports? http://t.co/W8FU1FgVvE",
+         "time": "05/23/2013"
+      },
+      {
+         "id": "337604081176674304",
+         "score": 0.9195119137416293,
+         "sentiment": "pos",
+         "text": "RT @SeattleMamaDoc: Find @EvelynHsuMD pediatric liver transplant MD changing how she provides care/shares what she learns&amp;knows. Smart enou\u2026",
+         "time": "05/23/2013"
+      },
+      {
+         "id": "337357619545124864",
+         "score": 0.7630459770114946,
+         "sentiment": "pos",
+         "text": "RT @philiplbell: TODAY: Univ of Washington Summit events on Future of K-12 #ScienceEducation - http://t.co/ikKBRksj84 #ngss - live tweeted \u2026",
+         "time": "05/23/2013"
+      },
+      {
+         "id": "336697900031688704",
+         "score": 0.6871972326967709,
+         "sentiment": "pos",
+         "text": "RT @AdamsLisa: Doctors, listen up. One wonderful thing you can say to a patient: \"I want to be a resource for you.\" I like that.",
+         "time": "05/21/2013"
+      },
+      {
+         "id": "336569493662883841",
+         "score": 0.9917014109156184,
+         "sentiment": "pos",
+         "text": "Recent interview @ParentMap my thoughts, research on violence, need 4 media diet, info Wash. legislation http://t.co/4HKvmNrtcL #pas2013",
+         "time": "05/20/2013"
+      },
+      {
+         "id": "317486672948363266",
+         "score": 0.9714116029552552,
+         "sentiment": "pos",
+         "text": "RT @PracticalWisdom: Perhaps Best learning enviornment for Little ones is when they are siting in our Laps. Love to see a Picture! @Bonn ...",
+         "time": "03/29/2013"
+      },
+      {
+         "id": "317402923019694080",
+         "score": 0.9987694891663187,
+         "sentiment": "pos",
+         "text": "@PracticalWisdom Great to hear. Thank you for your support of my work &amp; research, spreading the word.",
+         "time": "03/28/2013"
+      },
+      {
+         "id": "317397689664950272",
+         "score": 0.9997453176588037,
+         "sentiment": "pos",
+         "text": "@PracticalWisdom Belated reply - you're welcome re: follow. Look forward to more in future as I explore Twitter.",
+         "time": "03/28/2013"
+      },
+      {
+         "id": "316242101283217408",
+         "score": 0.9773352080787006,
+         "sentiment": "pos",
+         "text": "@moniguzman Thanks. Brave new world for me!",
+         "time": "03/25/2013"
+      },
+      {
+         "id": "314110171653754880",
+         "score": 0.6124999999999999,
+         "sentiment": "pos",
+         "text": "@marygseattle @StudySDM @seattlechildren yes",
+         "time": "03/19/2013"
+      },
+      {
+         "id": "187238624826376192",
+         "score": 0.9831142671520601,
+         "sentiment": "pos",
+         "text": "I have never done a tweetchat, but happy to participate\n #kidsprez",
+         "time": "04/03/2012"
+      },
+      {
+         "id": "154287241483653121",
+         "score": 0.9924773969297677,
+         "sentiment": "pos",
+         "text": "Dear followers, for those who have not seen it, here is my recent TED talk\nhttp://t.co/7fsLgBrj",
+         "time": "01/03/2012"
+      },
+      {
+         "id": "3755581435",
+         "score": 0.8004677393963254,
+         "sentiment": "pos",
+         "text": "Last night in Athens. After 3 weeks of hot and dry I am ready for Seattle temperate and wet. Bring it on!",
+         "time": "09/04/2009"
+      },
+      {
+         "id": "3728659022",
+         "score": 0.9644930829250726,
+         "sentiment": "pos",
+         "text": "Sunset in kiffisia. Alexi on guitar, scotch in hand, grilled fish on menu.\nMay life always be this good",
+         "time": "09/03/2009"
+      },
+      {
+         "id": "3627320946",
+         "score": 0.8696824065284338,
+         "sentiment": "pos",
+         "text": "Hiked soumerian gorge today with family! 11 miles in grecian sun. harrowing bus trip leading to Ariana hurling. Alls well that ends well",
+         "time": "08/29/2009"
+      },
+      {
+         "id": "3378430767",
+         "score": 0.6662783111193925,
+         "sentiment": "neg",
+         "text": "Breakfast buffet at hotel a big hit! Do French people put nutella on choc croissant?",
+         "time": "08/18/2009"
+      },
+      {
+         "id": "3358719192",
+         "score": 0.8106525376464039,
+         "sentiment": "pos",
+         "text": "Alexi won't take off sunglasses in dimly lit Picasso museum \nCooless trumps art",
+         "time": "08/17/2009"
+      },
+      {
+         "id": "3352086851",
+         "score": 0.9419719000311382,
+         "sentiment": "pos",
+         "text": "Arrived in Paris at 8 am with no sleep.  Check in at hotel is at 3 pm! Leave luggage and went to catacombs. Millions of bones start this day",
+         "time": "08/16/2009"
+      },
+      {
+         "id": "3330284647",
+         "score": 0.7616670879123534,
+         "sentiment": "pos",
+         "text": "On our way to Paris and Greece \nVery excited if daunted by 10 hour flight",
+         "time": "08/15/2009"
+      },
+      {
+         "id": "3268288856",
+         "score": 0.5398550724637683,
+         "sentiment": "neg",
+         "text": "Dimitri thinks demetrelias is a stravopsolis",
+         "time": "08/12/2009"
+      },
+      {
+         "id": "3268267464",
+         "score": 0.7580033995708869,
+         "sentiment": "neg",
+         "text": "to my few twitter followers.....  I don't tweet much... sorry....",
+         "time": "08/12/2009"
+      },
+      {
+         "id": "2915226134",
+         "score": 0.5,
+         "sentiment": "pos",
+         "text": "sweltering in seattle",
+         "time": "07/29/2009"
+      },
+      {
+         "id": "2055307314",
+         "score": 0.940528634361234,
+         "sentiment": "pos",
+         "text": "Cool! Love lamb",
+         "time": "06/06/2009"
+      }
+   ]
 }

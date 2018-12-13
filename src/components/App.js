@@ -12,8 +12,8 @@ class App extends Component {
 	state = {
 		loading: false,
 		username: "",
-		// data: require("../SAMPLE.json")
-		data: null
+		data: require("../SAMPLE.json")
+		// data: null
 	};
 
 	handleUsernameChange = event => {
