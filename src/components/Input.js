@@ -39,7 +39,7 @@ const At = styled.div`
 `;
 
 const Text = styled.input`
-  width: 100%;
+  width: 90%;
   height: 56px;
   position: relative;
   padding: 0px 16px 0px 35px;

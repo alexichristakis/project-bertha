@@ -10,6 +10,7 @@ const Wrapper = styled.div`
 class Anayltics extends Component {
 	render() {
 		const { data } = this.props;
+		console.log(data);
 		return (
 			<Wrapper>
 				<VictoryPie
@@ -17,9 +18,11 @@ class Anayltics extends Component {
 					padAngle={3}
 					height={200}
 					innerRadius={35}
-					// animate={{
-					// 	duration: 2000
-					// }}
+					style={{
+						labels: {
+							fontSize: 10
+						}
+					}}
 					data={[{ x: "Positive", y: data.pos }, { x: "Negative", y: data.neg }]}
 				/>
 			</Wrapper>
