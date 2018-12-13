@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaAt } from "react-icons/fa";
 
 import colors from "../lib/colors";
 
 const Field = styled.div`
+  flex-direction: row;
   margin-left: 20px;
   margin-right: 20px;
   width: 100%;
@@ -28,11 +29,20 @@ const Field = styled.div`
         `)};
 `;
 
+const At = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  padding-top: 21px;
+  color: ${colors.darkgray};
+`;
+
 const Text = styled.input`
   width: 100%;
   height: 56px;
   position: relative;
-  padding: 0px 16px;
+  padding: 0px 16px 0px 35px;
   border: none;
   border-radius: 4px;
   font-size: 16px;
@@ -79,6 +89,9 @@ class Input extends Component {
 
     return (
       <Field active={active} locked={locked}>
+        <At>
+          <FaAt />
+        </At>
         <Text
           id={1}
           type="text"

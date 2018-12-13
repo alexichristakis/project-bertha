@@ -4,6 +4,7 @@ import { VictoryPie } from "victory";
 
 import TopBar from "./TopBar";
 import Loading from "./Loading";
+import Anayltics from "./Anayltics";
 
 import { fetchSentiment } from "../util/api";
 
@@ -26,7 +27,17 @@ class App extends Component {
 			fetchSentiment(username)
 				.then(res => {
 					console.log(res);
-					this.setState({ data: res, loading: false });
+					let pos = 0;
+					let neg = 0;
+					const { data } = res;
+					data.forEach(tweet => {
+						if (tweet.sentiment == "pos") pos++;
+						if (tweet.sentiment == "neg") neg++;
+					});
+
+					let analytic_data = { pos, neg, total: pos + neg };
+
+					this.setState({ data: analytic_data, loading: false });
 				})
 				.catch(error => {
 					console.log(error);
@@ -45,6 +56,7 @@ class App extends Component {
 					onUsernameChange={this.handleUsernameChange}
 					onSearch={this.handlePressSearch}
 				/>
+				<Anayltics data={this.state.data} />
 			</Fragment>
 		);
 	}
