@@ -8,6 +8,7 @@
     "moment": "^2.23.0",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
+    "react-animated-number": "^0.4.4",
     "react-dom": "^16.6.3",
     "react-icons": "^3.2.2",
     "react-loading": "^2.0.3",

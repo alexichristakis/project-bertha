@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import AnimatedNumber from "react-animated-number";
 import { VictoryPie } from "victory";
 import moment from "moment";
 
@@ -73,8 +74,20 @@ const Mid = ({ data }) => {
 					/>
 				</div>
 				<Header>
-					<Header xlarge>{tweets_per_month}</Header>
-					Tweets / month
+					<AnimatedNumber
+						component="text"
+						value={tweets_per_month}
+						style={{
+							// transition: "0.8s ease-out",
+							fontSize: 48
+							// transitionProperty: "background-color, color, opacity"
+						}}
+						formatValue={n => Math.round(n * 100) / 100}
+						duration={1000}
+					/>
+					<br />
+					{/*					<Header xlarge>{tweets_per_month}</Header>
+					*/} Tweets / month
 				</Header>
 				<div style={{ display: "flex", flexDirection: "column", flex: 2 }}>
 					<Header>topic:</Header>
