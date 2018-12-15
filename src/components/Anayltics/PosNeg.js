@@ -12,23 +12,29 @@ const Wrapper = styled.div`
 `;
 
 const PosNeg = ({ data }) => {
-	const { num_neg, num_pos, most_positive, most_negative } = data;
+	const { num_neg, num_pos, num_neu, most_positive, most_negative } = data;
 	return (
 		<Wrapper>
 			<Tweet header={"most positive tweet:"} text={most_positive.text} time={most_positive.time} />
-			<VictoryPie
-				animate={true}
-				colorScale={["red", "green"]}
-				padAngle={3}
-				height={300}
-				innerRadius={50}
-				style={{
-					labels: {
-						fontSize: 15
-					}
-				}}
-				data={[{ x: "Negative", y: num_pos }, { x: "Positive", y: num_neg }]}
-			/>
+			<div style={{ display: "flex", flex: 3 }}>
+				<VictoryPie
+					animate={true}
+					colorScale={["red", "orange", "green"]}
+					padAngle={3}
+					height={300}
+					innerRadius={50}
+					style={{
+						labels: {
+							fontSize: 15
+						}
+					}}
+					data={[
+						{ x: "Negative", y: num_pos },
+						{ x: "Neutral", y: num_neu },
+						{ x: "Positive", y: num_neg }
+					]}
+				/>
+			</div>
 			<Tweet header={"most negative tweet:"} text={most_negative.text} time={most_negative.time} />
 		</Wrapper>
 	);

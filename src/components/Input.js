@@ -6,9 +6,10 @@ import colors from "../lib/colors";
 
 const Field = styled.div`
   flex-direction: row;
+  flex: 2;
   margin-left: 20px;
   margin-right: 20px;
-  width: 100%;
+  // width: 100%;
   height: 56px;
   border-radius: 20px;
   position: relative;
@@ -39,7 +40,8 @@ const At = styled.div`
 `;
 
 const Text = styled.input`
-  width: 90%;
+  // width: 90%;
+  flex: 2;
   height: 56px;
   position: relative;
   padding: 0px 16px 0px 35px;

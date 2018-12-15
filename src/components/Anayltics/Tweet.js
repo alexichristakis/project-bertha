@@ -5,6 +5,7 @@ import colors from "../../lib/colors";
 
 const Wrapper = styled.div`
 	display: flex;
+	flex: 3;
 	flex-direction: column;
 `;
 

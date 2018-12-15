@@ -19,6 +19,7 @@ const Wrapper = styled.div`
 
 class TimeSeries extends Component {
 	state = {
+		num_tweets: 0,
 		time_series: [],
 		zoomedXDomain: [],
 		combined_dataset: [],
@@ -31,13 +32,18 @@ class TimeSeries extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (this.props.username !== nextProps.username) {
+		if (
+			this.props.username !== nextProps.username ||
+			this.props.num_tweets !== nextProps.num_tweets
+		) {
 			this.update();
 		}
 	}
 
 	update = () => {
-		this.setState({ time_series: this.props.data.time_series }, () => {
+		console.log("updating");
+		const { data, num_tweets } = this.props;
+		this.setState({ time_series: data.time_series, num_tweets: num_tweets }, () => {
 			this.updateData([-1 * Infinity, Infinity], () =>
 				this.setState({ entireDomain: this.getEntireDomain })
 			);
@@ -123,6 +129,7 @@ class TimeSeries extends Component {
 				>
 					<VictoryLine
 						data={combined_dataset}
+						interpolation="bundle"
 						domain={{ y: [-1, 1] }}
 						animate={{
 							duration: 2000,
@@ -153,6 +160,7 @@ class TimeSeries extends Component {
 				>
 					<VictoryLine
 						data={positive}
+						interpolation="bundle"
 						style={{
 							data: { stroke: "green" }
 						}}
@@ -164,6 +172,7 @@ class TimeSeries extends Component {
 					/>
 					<VictoryLine
 						data={negative}
+						interpolation="bundle"
 						style={{
 							data: { stroke: "red" }
 						}}

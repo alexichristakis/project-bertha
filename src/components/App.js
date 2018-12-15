@@ -14,6 +14,8 @@ class App extends Component {
 		username: "",
 		// data: require("../SAMPLE2.json"),
 		queried_username: "",
+		queried_num_tweets: 500,
+		num_tweets: 500,
 		data: null
 	};
 
@@ -23,14 +25,20 @@ class App extends Component {
 	};
 
 	handlePressSearch = () => {
-		const { username } = this.state;
+		const { username, num_tweets } = this.state;
 		// console.log(username);
 		this.setState({ loading: true }, () =>
-			fetchSentiment(username)
+			fetchSentiment(username, num_tweets)
 				.then(res => {
 					// console.log(res);
 					const { data } = res;
-					this.setState({ data, queried_username: username, loading: false });
+					console.log(data);
+					this.setState({
+						data,
+						queried_username: username,
+						queried_num_tweets: num_tweets,
+						loading: false
+					});
 
 					/* some rudimentary analysis */
 					// let pos = 0;
@@ -52,6 +60,10 @@ class App extends Component {
 		);
 	};
 
+	handleOnSelect = num_tweets => {
+		this.setState({ num_tweets });
+	};
+
 	render() {
 		return (
 			<Fragment>
@@ -61,8 +73,13 @@ class App extends Component {
 					username={this.state.username}
 					onUsernameChange={this.handleUsernameChange}
 					onSearch={this.handlePressSearch}
+					onSelect={this.handleOnSelect}
 				/>
-				<Anayltics data={this.state.data} username={this.state.queried_username} />
+				<Anayltics
+					data={this.state.data}
+					username={this.state.queried_username}
+					num_tweets={this.state.queried_num_tweets}
+				/>
 			</Fragment>
 		);
 	}

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import styled, { css } from "styled-components";
+import Select from "react-select";
+
 import colors from "../lib/colors";
 
 import Input from "./Input";
@@ -44,8 +46,45 @@ const Button = styled.img`
 	}
 `;
 
+const options = [
+	{ value: 100, label: "100" },
+	{ value: 200, label: "200" },
+	{ value: 500, label: "500" },
+	{ value: 1000, label: "1000" }
+];
+
+const customStyles = {
+	container: (provided, state) => ({
+		...provided,
+		flex: 1,
+		height: "56px",
+		marginRight: "20px"
+	}),
+	valueContainer: (provided, state) => ({
+		...provided,
+		height: "56px"
+	}),
+	control: (provided, state) => ({
+		...provided,
+		borderRadius: "20px",
+		borderWidth: "0px",
+		backgroundColor: colors.lightgray
+	}),
+	menu: (provided, state) => ({
+		...provided,
+		borderRadius: "20px",
+		borderWidth: "0px",
+		overflow: "hidden"
+	})
+};
+
 class TopBar extends Component {
 	state = {};
+
+	handleOnChange = (item, { action }) => {
+		// console.log(type);
+		if (action === "select-option") this.props.onSelect(item.value);
+	};
 
 	render() {
 		return (
@@ -58,6 +97,12 @@ class TopBar extends Component {
 					value={this.props.username}
 					locked={this.props.loading}
 					active={false}
+				/>
+				<Select
+					placeholder="number of Tweets"
+					styles={customStyles}
+					options={options}
+					onChange={this.handleOnChange}
 				/>
 				<Button
 					onClick={() => window.open("https://github.com/alexichristakis/project-bertha")}

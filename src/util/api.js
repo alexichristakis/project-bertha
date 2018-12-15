@@ -9,9 +9,10 @@ const API = axios.create({
 	baseURL
 });
 
-export const fetchSentiment = username => {
+export const fetchSentiment = (username, num_tweets) => {
+	console.log(num_tweets);
 	return new Promise((resolve, reject) => {
-		API.get("/tweet", { params: { username } })
+		API.get("/tweet", { params: { username, num_tweets } })
 			.then(res => {
 				resolve(res);
 			})
@@ -20,5 +21,3 @@ export const fetchSentiment = username => {
 };
 
 // http://0.0.0.0:5000/tweet?username=lukas
-
-
