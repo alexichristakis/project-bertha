@@ -10,9 +10,14 @@ import {
 	VictoryLine
 } from "victory";
 
+import colors from "../../lib/colors";
+
 const Wrapper = styled.div`
 	width: 100%;
 	height: 100%;
+	background-color: ${colors.medgray};
+	border-radius: 0 0 20px 20px;
+	padding-bottom: 20px;
 	display: flex;
 	flex-direction: row;
 `;
@@ -145,8 +150,8 @@ class TimeSeries extends Component {
 						tickCount={5}
 						style={{
 							axis: { stroke: "#756f6a" },
-							axisLabel: { fontSize: 20, padding: 30 },
-							grid: { stroke: t => (t > 0.5 ? "red" : "grey") },
+							axisLabel: { fontSize: 15, padding: 30 },
+							grid: { stroke: t => (t > 0.5 ? colors.blue : "grey") },
 							ticks: { stroke: "grey", size: 5 },
 							tickLabels: { fontSize: 8, padding: 5 }
 						}}
@@ -162,7 +167,7 @@ class TimeSeries extends Component {
 						data={positive}
 						interpolation="bundle"
 						style={{
-							data: { stroke: "green" }
+							data: { stroke: colors.green }
 						}}
 						domain={{ y: [0, 1] }}
 						animate={{
@@ -174,7 +179,7 @@ class TimeSeries extends Component {
 						data={negative}
 						interpolation="bundle"
 						style={{
-							data: { stroke: "red" }
+							data: { stroke: colors.red }
 						}}
 						domain={{ y: [0, 1] }}
 						animate={{
@@ -191,8 +196,8 @@ class TimeSeries extends Component {
 						tickCount={5}
 						style={{
 							axis: { stroke: "#756f6a" },
-							axisLabel: { fontSize: 20, padding: 30 },
-							grid: { stroke: t => (t > 0.5 ? "red" : "grey") },
+							axisLabel: { fontSize: 15, padding: 30 },
+							grid: { stroke: t => (t > 0.5 ? colors.blue : "grey") },
 							ticks: { stroke: "grey", size: 5 },
 							tickLabels: { fontSize: 8, padding: 5 }
 						}}

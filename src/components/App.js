@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
-import { VictoryPie } from "victory";
 
 import TopBar from "./TopBar";
 import Loading from "./Loading";
@@ -12,11 +11,11 @@ class App extends Component {
 	state = {
 		loading: false,
 		username: "",
-		// data: require("../SAMPLE2.json"),
+		data: require("../SAMPLE.json"),
 		queried_username: "",
 		queried_num_tweets: 500,
-		num_tweets: 500,
-		data: null
+		num_tweets: 500
+		// data: null
 	};
 
 	handleUsernameChange = event => {
@@ -26,32 +25,16 @@ class App extends Component {
 
 	handlePressSearch = () => {
 		const { username, num_tweets } = this.state;
-		// console.log(username);
+
 		this.setState({ loading: true }, () =>
 			fetchSentiment(username, num_tweets)
-				.then(res => {
-					// console.log(res);
-					const { data } = res;
-					console.log(data);
+				.then(({ data }) => {
 					this.setState({
 						data,
 						queried_username: username,
 						queried_num_tweets: num_tweets,
 						loading: false
 					});
-
-					/* some rudimentary analysis */
-					// let pos = 0;
-					// let neg = 0;
-					// const { data } = res;
-					// data.forEach(tweet => {
-					// 	if (tweet.sentiment == "pos") pos++;
-					// 	if (tweet.sentiment == "neg") neg++;
-					// });
-
-					// let analytic_data = { pos, neg, total: pos + neg };
-
-					// this.setState({ data: analytic_data, loading: false });
 				})
 				.catch(error => {
 					console.log(error);

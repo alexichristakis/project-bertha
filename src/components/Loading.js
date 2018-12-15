@@ -6,14 +6,12 @@ import colors from "../lib/colors";
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: 200vh;
+  width: 100vw;
   z-index: 50;
   display: flex;
-  align-items: center;
   justify-content: center;
+  padding-top: 30%;
   background-color: ${colors.transgray};
 `;
 

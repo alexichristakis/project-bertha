@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import TimeSeries from "./TimeSeries";
+import Mid from "./Mid";
 import PosNeg from "./PosNeg";
 
 const Wrapper = styled.div`
@@ -22,12 +23,12 @@ class Anayltics extends Component {
 	render() {
 		const { data, username, num_tweets } = this.props;
 
-		// console.log(data);
 		if (data == null) return <div />;
 		else {
 			return (
 				<Wrapper>
 					<TimeSeries data={data} username={username} num_tweets={num_tweets} />
+					<Mid data={data} />
 					<PosNeg data={data} />
 				</Wrapper>
 			);
