@@ -7,6 +7,9 @@ import PosNeg from "./PosNeg";
 
 const Wrapper = styled.div`
 	height: 100%;
+	max-width: 1500px;
+	margin: 0 auto;
+	align-self: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

@@ -4,6 +4,7 @@ import _ from "lodash";
 import moment from "moment";
 import {
 	VictoryZoomContainer,
+	VictoryLabel,
 	VictoryChart,
 	VictoryTheme,
 	VictoryAxis,
@@ -132,6 +133,7 @@ class TimeSeries extends Component {
 						<VictoryZoomContainer zoomDimension="x" onZoomDomainChange={this.onDomainChange} />
 					}
 				>
+					<VictoryLabel x={160} y={24} style={{ fontSize: "20px" }} text="Positivity Score" />
 					<VictoryLine
 						data={combined_dataset}
 						interpolation="bundle"
@@ -142,7 +144,7 @@ class TimeSeries extends Component {
 						}}
 					/>
 
-					<VictoryAxis crossAxis dependentAxis label="Score" />
+					<VictoryAxis crossAxis dependentAxis label="Positivity" />
 					<VictoryAxis
 						crossAxis
 						offsetY={50}
@@ -163,6 +165,12 @@ class TimeSeries extends Component {
 						<VictoryZoomContainer zoomDimension="x" onZoomDomainChange={this.onDomainChange} />
 					}
 				>
+					<VictoryLabel
+						x={110}
+						y={24}
+						style={{ fontSize: "20px" }}
+						text="Positive & Negative Probabilities"
+					/>
 					<VictoryLine
 						data={positive}
 						interpolation="bundle"

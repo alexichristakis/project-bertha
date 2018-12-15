@@ -9,7 +9,7 @@ import Tweet from "./Tweet";
 const Wrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-start;
 	padding: 0 16px 0 16px;
 	margin-bottom: 20px;
 `;
@@ -32,6 +32,7 @@ const Header = styled.div`
 	color: ${colors.darkgray};
 	margin: 12px;
 	font-size: 20px;
+	font-weight: bold;
 `;
 
 const PosNeg = ({ data }) => {

@@ -23,6 +23,7 @@ const Header = styled.div`
 	color: ${colors.darkgray};
 	margin: 0 0 12px 12px;
 	font-size: 20px;
+	font-weight: bold;
 `;
 
 const Text = styled.div`
