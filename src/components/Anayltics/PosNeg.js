@@ -36,17 +36,7 @@ const Header = styled.div`
 `;
 
 const PosNeg = ({ data }) => {
-	let {
-		num_neg,
-		num_pos,
-		num_neu,
-		most_positive,
-		most_negative,
-		num_political,
-		num_art,
-		num_tech,
-		num_sports
-	} = data;
+	let { most_positive, most_negative } = data;
 
 	const positive_tweet = most_positive.shift();
 	const negative_tweet = most_negative.shift();
@@ -62,7 +52,7 @@ const PosNeg = ({ data }) => {
 				/>
 				<Header>top positive tweets:</Header>
 				{most_positive.map(tweet => (
-					<Tweet positive text={tweet[2]} time={tweet[1]} />
+					<Tweet positive key={tweet[0]} text={tweet[2]} time={tweet[1]} />
 				))}
 			</Column>
 			<div style={{ display: "flex", flex: 1 }} />
@@ -75,7 +65,7 @@ const PosNeg = ({ data }) => {
 				/>
 				<Header>top negative tweets:</Header>
 				{most_negative.map(tweet => (
-					<Tweet negative text={tweet[2]} time={tweet[1]} />
+					<Tweet negative key={tweet[0]} text={tweet[2]} time={tweet[1]} />
 				))}
 			</Column>
 		</Wrapper>

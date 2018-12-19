@@ -37,6 +37,7 @@ class TimeSeries extends Component {
 		this.update();
 	}
 
+	// wow this is pretty janky - not proud
 	componentWillReceiveProps(nextProps) {
 		if (
 			this.props.username !== nextProps.username ||
@@ -46,8 +47,8 @@ class TimeSeries extends Component {
 		}
 	}
 
+	// this too...
 	update = () => {
-		console.log("updating");
 		const { data, num_tweets } = this.props;
 		this.setState({ time_series: data.time_series, num_tweets: num_tweets }, () => {
 			this.updateData([-1 * Infinity, Infinity], () =>
@@ -63,11 +64,6 @@ class TimeSeries extends Component {
 			x: [combined_dataset[0].x, _.last(combined_dataset).x]
 		};
 	}
-
-	// getData() {
-	// 	const { zoomedXDomain } = this.state;
-	// 	this.updateData(zoomedXDomain);
-	// }
 
 	filter = (entry, domain) => {
 		const ts = moment(entry.x).unix();
@@ -121,9 +117,39 @@ class TimeSeries extends Component {
 		});
 	};
 
+	// function to aggregate time series data by day
+	aggregateData = data => {
+		let aggregated = [];
+
+		let sum = 0;
+		let count = 0;
+		data.forEach((entry, index) => {
+			if (index > 0) {
+				if (entry.time == data[index - 1].time) {
+					sum += entry.y;
+					count += 1;
+				} else {
+					if (sum) {
+						sum /= count;
+						aggregated.push({ time: data[index - 1].time, x: data[index - 1].time, y: sum });
+						sum = 0;
+						count = 0;
+					} else {
+						aggregated.push(entry);
+					}
+				}
+			}
+		});
+
+		return aggregated;
+	};
+
 	render() {
 		const { combined_dataset, positive, negative } = this.state;
-		// console.log(combined_dataset);
+
+		let new_combined = this.aggregateData(combined_dataset);
+		let new_positive = this.aggregateData(positive);
+		let new_negative = this.aggregateData(negative);
 
 		return (
 			<Wrapper>
@@ -135,7 +161,7 @@ class TimeSeries extends Component {
 				>
 					<VictoryLabel x={160} y={24} style={{ fontSize: "20px" }} text="Positivity Score" />
 					<VictoryLine
-						data={combined_dataset}
+						data={new_combined}
 						interpolation="bundle"
 						domain={{ y: [-1, 1] }}
 						animate={{
@@ -172,7 +198,7 @@ class TimeSeries extends Component {
 						text="Positive & Negative Probabilities"
 					/>
 					<VictoryLine
-						data={positive}
+						data={new_positive}
 						interpolation="bundle"
 						style={{
 							data: { stroke: colors.green }
@@ -184,7 +210,7 @@ class TimeSeries extends Component {
 						}}
 					/>
 					<VictoryLine
-						data={negative}
+						data={new_negative}
 						interpolation="bundle"
 						style={{
 							data: { stroke: colors.red }

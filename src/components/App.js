@@ -11,11 +11,11 @@ class App extends Component {
 	state = {
 		loading: false,
 		username: "",
-		// data: require("../SAMPLE.json"),
+		data: require("../SAMPLE.json"),
 		queried_username: "",
 		queried_num_tweets: 500,
-		num_tweets: 500,
-		data: null
+		num_tweets: 500
+		// data: null
 	};
 
 	handleUsernameChange = event => {
